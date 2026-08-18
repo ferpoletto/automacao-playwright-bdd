@@ -15,7 +15,8 @@ export class LoginPage {
     this.usernameInput = page.locator('[data-test="username"]');
     this.passwordInput = page.locator('[data-test="password"]');
     this.loginButton = page.locator('[data-test="login-button"]');
-    this.errorMessage = page.locator('[data-test="error-button"]'); //
+    this.errorMessage = page.locator('[data-test="error"]'); //
+  
   }
 
   // 3. Método para acessar a página de login

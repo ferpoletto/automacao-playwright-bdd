@@ -21,8 +21,8 @@ Then('deve visualizar a página de produtos', async ({ page }) => {
   await expect(page).toHaveURL(/inventory.html/);
 });
 
-// 4. Validação de falha: visibilidade da mensagem de erro
-Then('deve visualizar uma mensagem de erro', async ({ page }) => {
+Then('deve visualizar a mensagem de erro {string}', async ({ page }, mensagemEsperada: string) => {
   const loginPage = new LoginPage(page);
   await expect(loginPage.errorMessage).toBeVisible();
+  await expect(loginPage.errorMessage).toHaveText(mensagemEsperada);
 });
