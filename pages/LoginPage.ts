@@ -19,10 +19,9 @@ export class LoginPage {
   
   }
 
-  // 3. Método para acessar a página de login
-  async goto() {
-    await this.page.goto('https://www.saucedemo.com/');
-  }
+  async navigateTo() {
+      await this.page.goto('/');
+    }
 
   // 4. Método que executa a ação de login completa
   async login(username: string, password: string) {
@@ -30,4 +29,5 @@ export class LoginPage {
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
+
 }

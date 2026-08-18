@@ -7,7 +7,7 @@ const { Given, When, Then } = createBdd();
 // 1. Contexto inicial: navegação
 Given('que o usuário está na página de login', async ({ page }) => {
   const loginPage = new LoginPage(page);
-  await loginPage.goto();
+  await loginPage.navigateTo();
 });
 
 // 2. Ação: preenchimento reutilizável para qualquer usuário e senha
